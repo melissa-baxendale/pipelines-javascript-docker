@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: melissabaxendalepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: melissabaxendalepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: melissabaxendalepipelinesjavascriptdocker 
+          image: mycontainerregistryaks2.azurecr.io/melissabaxendalepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
